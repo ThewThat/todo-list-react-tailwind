@@ -5,7 +5,7 @@ import TodoApp from "./components/TodoApp";
 
 const App = () => {
   return (
-    <div className="w-full bg-green-200">
+    <div className="w-full bg-gray-50">
       <header className="min-h-screen w-full sm:w-1/2 mx-auto">
         <TodoApp />
       </header>

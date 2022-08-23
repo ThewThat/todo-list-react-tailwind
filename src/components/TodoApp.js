@@ -18,7 +18,7 @@ const TodoApp = () => {
 
   const updateTodo = useCallback((todoId, newTask) => {
     setTodos((todos) =>
-      todos.map((todo) =>
+      todos?.map((todo) =>
         todo.id === todoId ? { ...todo, task: newTask } : todo
       )
     );
@@ -29,13 +29,13 @@ const TodoApp = () => {
   }, []);
 
   useEffect(() => {
+    localStorage.setItem(Local_key, JSON.stringify(todos));
+  }, [todos]);
+
+  useEffect(() => {
     const data = JSON.parse(localStorage.getItem(Local_key));
     setTodos(data);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem(Local_key, JSON.stringify(todos));
-  }, [todos]);
 
   return (
     <div className="flex flex-col justify-center p-5">

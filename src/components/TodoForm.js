@@ -23,7 +23,7 @@ const TodoForm = ({ addNewTodo }) => {
             id="standard-basic"
             label="Todo"
           />
-          <button className="bg-blue-500 rounded p-3 font-bold w-full sm:w-1/4">
+          <button type="submit" className="bg-blue-500 rounded p-3 font-bold w-full sm:w-1/4">
             ADD
           </button>
         </div>
